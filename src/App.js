@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Welcome1, Welcome2 } from "./components/CompType";
+import Clock from "./components/Clock";
 
 function App() {
   // return (
@@ -22,8 +24,8 @@ function App() {
   //   </div>
   // );
     const user = {
-        firstName: 'Harper',
-        lastName: 'Perez'
+        firstName: '赵四',
+        lastName: '尼古拉斯'
     };
     function formatName(user) {
         return user.firstName + ' ' + user.lastName;
@@ -43,6 +45,9 @@ function App() {
             {/* 属性 */}
             <img src={logo} style={{width: '100px'}} alt=""/>
             {jsx}
+            <Welcome1 name='tom'/>
+            <Welcome2 name='jerry'/>
+            <Clock name='hey, '/>
         </div>
     )
 }
