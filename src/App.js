@@ -5,6 +5,7 @@ import { Welcome1, Welcome2 } from "./components/CompType";
 import Clock from "./components/Clock";
 import CartDemo from "./components/CartDemo";
 import Lifecycle from "./components/Lifecycle";
+import Calculator from "./components/Calculator";
 
 function App() {
   // return (
@@ -52,6 +53,7 @@ function App() {
             <Clock name='hey, '/>
             <CartDemo title='课程商品'/>
             <Lifecycle/>
+            <Calculator/>
         </div>
     )
 }
