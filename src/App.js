@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import { Welcome1, Welcome2 } from "./components/CompType";
 import Clock from "./components/Clock";
+import CartDemo from "./components/CartDemo";
+import Lifecycle from "./components/Lifecycle";
 
 function App() {
   // return (
@@ -38,7 +40,7 @@ function App() {
     }
     const jsx = <h2>i'm a jsp , no ,i mean jsx</h2>;
     return (
-        <div className='container'>
+        <div className='container' style={{padding: '0 20px'}}>
             {/* 表达式 */}
             <h1>{formatName(user)}</h1>
             {greeting(user)}
@@ -48,6 +50,8 @@ function App() {
             <Welcome1 name='tom'/>
             <Welcome2 name='jerry'/>
             <Clock name='hey, '/>
+            <CartDemo title='课程商品'/>
+            <Lifecycle/>
         </div>
     )
 }
