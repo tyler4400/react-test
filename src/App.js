@@ -6,6 +6,8 @@ import Clock from "./components/Clock";
 import CartDemo from "./components/CartDemo";
 import Lifecycle from "./components/Lifecycle";
 import Calculator from "./components/Calculator";
+import AntdTest from "./components/AntdTest";
+import CommentList from "./components/CommentList";
 
 function App() {
   // return (
@@ -52,8 +54,11 @@ function App() {
             <Welcome2 name='jerry'/>
             <Clock name='hey, '/>
             <CartDemo title='课程商品'/>
-            <Lifecycle/>
+            {/*<Lifecycle/>*/}
             <Calculator/>
+            <h1>ant-design</h1>
+            <AntdTest/>
+            <CommentList/>
         </div>
     )
 }
