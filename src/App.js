@@ -8,6 +8,7 @@ import Lifecycle from "./components/Lifecycle";
 import Calculator from "./components/Calculator";
 import AntdTest from "./components/AntdTest";
 import CommentList from "./components/CommentList";
+import Hoc from "./components/Hoc";
 
 function App() {
   // return (
@@ -59,6 +60,8 @@ function App() {
             <h1>ant-design</h1>
             <AntdTest/>
             <CommentList/>
+            <h1>HOC</h1>
+            <Hoc/>
         </div>
     )
 }

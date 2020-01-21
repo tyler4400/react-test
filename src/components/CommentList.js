@@ -42,25 +42,35 @@ export default class CommentList extends Component {
 //   );
 // });
 
+const Comment = React.memo(function (props){
+    console.log('render Comment');
+    return(
+        <div>
+            <p>props.body</p>
+            <p>---props.author</p>
+        </div>
+    )
+});
+
 // class Comment extends React.PureComponent{
-class Comment extends React.Component{
-
-    shouldComponentUpdate(nextProps, nextState, nextCtx){
-        if(nextProps.author === this.props.author &&
-            nextProps.body === this.props.body){
-            return false;
-        }
-        return true;
-    }
-
-  render() {
-    console.log("render comment");
-
-    return (
-      <div>
-        <p>{this.props.body}</p>
-        <p> --- {this.props.author}</p>
-      </div>
-    );
-  }
-}
+// // class Comment extends React.Component{
+// //
+// //     shouldComponentUpdate(nextProps, nextState, nextCtx){
+// //         if(nextProps.author === this.props.author &&
+// //             nextProps.body === this.props.body){
+// //             return false;
+// //         }
+// //         return true;
+// //     }
+//
+//   render() {
+//     console.log("render comment");
+//
+//     return (
+//       <div>
+//         <p>{this.props.body}</p>
+//         <p> --- {this.props.author}</p>
+//       </div>
+//     );
+//   }
+// }
