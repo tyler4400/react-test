@@ -9,6 +9,7 @@ import Calculator from "./components/Calculator";
 import AntdTest from "./components/AntdTest";
 import CommentList from "./components/CommentList";
 import Hoc from "./components/Hoc";
+import {WelcomeDialog, FetcherUser, RadioGroupTest} from "./components/Composition";
 
 function App() {
   // return (
@@ -46,13 +47,13 @@ function App() {
     return (
         <div className='container' style={{padding: '0 20px'}}>
             {/* 表达式 */}
-            <h1>{formatName(user)}</h1>
-            {greeting(user)}
+            {/*<h1>{formatName(user)}</h1>*/}
+            {/*{greeting(user)}*/}
             {/* 属性 */}
             <img src={logo} style={{width: '100px'}} alt=""/>
             {jsx}
-            <Welcome1 name='tom'/>
-            <Welcome2 name='jerry'/>
+            {/*<Welcome1 name='tom'/>*/}
+            {/*<Welcome2 name='jerry'/>*/}
             <Clock name='hey, '/>
             <CartDemo title='课程商品'/>
             {/*<Lifecycle/>*/}
@@ -62,6 +63,9 @@ function App() {
             <CommentList/>
             <h1>HOC</h1>
             <Hoc/>
+            <WelcomeDialog color="green"/>
+            <FetcherUser/>
+            <RadioGroupTest/>
         </div>
     )
 }
