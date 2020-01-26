@@ -1,7 +1,19 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {Button} from "antd";
 
+// 自定义hook是一个函数，名称用“use"开头，函数内部可以调用其他钩子
+function useAge(){
+    const [age, setAge] = useState(null);
+    useEffect(() => {
+        setTimeout(() => {
+            setAge(18);
+        }, 2000);
+    });
+    return age;
+}
+
 export default function HookTest(){
+    const age = useAge();
     const [count, setCount] = useState(0);
     const [fruit, setFruit] = useState('banana');
     const [newFruit, setNewFruit] = useState('');
@@ -14,8 +26,9 @@ export default function HookTest(){
 
     return (
         <div>
+            <p>年龄：{age ? age : 'loading...'}</p>
             <p>点击了{count}次</p>
-            <Button type="primary" onClick={e => setCount(count + 1)} >点击</Button>
+            <Button type="primary" onClick={e => setCount(count + 1)}>点击</Button>
 
             <p>选择的水果：{fruit}</p>
             <ul>
