@@ -9,6 +9,7 @@ import CommentList from "./components/CommentList";
 import Hoc from "./components/Hoc";
 import {FetcherUser, RadioGroupTest, WelcomeDialog} from "./components/Composition";
 import HookTest from "./components/HookTest";
+import ContextText from "./components/Context";
 
 function App(){
     // return (
@@ -75,6 +76,9 @@ function App(){
 
             <h1>Hook</h1>
             <HookTest/>
+
+            <h1>Context</h1>
+            <ContextText/>
         </div>
     )
 }
