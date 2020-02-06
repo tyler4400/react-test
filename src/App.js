@@ -10,6 +10,8 @@ import Hoc from "./components/Hoc";
 import {FetcherUser, RadioGroupTest, WelcomeDialog} from "./components/Composition";
 import HookTest from "./components/HookTest";
 import ContextText from "./components/Context";
+import WrappedNormalLoginForm from "./components/AntdForm";
+import MyForm from "./components/MyFrom";
 
 function App(){
     // return (
@@ -79,6 +81,12 @@ function App(){
 
             <h1>Context</h1>
             <ContextText/>
+
+            <h1>antd表单的使用</h1>
+            <WrappedNormalLoginForm/>
+
+            <h1>仿写antd表单</h1>
+            <MyForm/>
         </div>
     )
 }
