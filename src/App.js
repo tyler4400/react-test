@@ -12,6 +12,9 @@ import HookTest from "./components/HookTest";
 import ContextText from "./components/Context";
 import WrappedNormalLoginForm from "./components/AntdForm";
 import MyForm from "./components/MyFrom";
+import ReduxTest from "./components/ReduxTest";
+import { Provider } from "react-redux";
+import store from "./Store";
 
 function App(){
     // return (
@@ -87,6 +90,11 @@ function App(){
 
             <h1>仿写antd表单</h1>
             <MyForm/>
+
+            <h1>Redux的学习</h1>
+            <Provider store={store}>
+            <ReduxTest/>
+            </Provider>
         </div>
     )
 }
