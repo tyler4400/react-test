@@ -93,7 +93,7 @@ function App(){
 
             <h1>Redux的学习</h1>
             <Provider store={store}>
-            <ReduxTest/>
+                <ReduxTest/>
             </Provider>
         </div>
     )

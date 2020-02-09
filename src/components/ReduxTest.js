@@ -6,15 +6,21 @@ import { connect } from "react-redux";
 const mapStateToProps =state => ({num: state});
 const mapDispatchToProps = {
     add: () => ({type: 'add'}),
-    minus: () => ({type: 'minus'})
+    minus: () => ({type: 'minus'}),
+    asyncAdd: () => dispatch => {
+        setTimeout(() => {
+            dispatch({type: 'add'});
+        }, 2000)
+    }
 };
 
-function ReduxTest({add, minus, num}){
+function ReduxTest({add, minus, num, asyncAdd}){
     return (
         <div>
             <Button onClick={minus}>-</Button>
             <p>{num}</p>
             <Button onClick={add}>+</Button>
+            <Button onClick={asyncAdd}>asyncAdd</Button>
         </div>
 
     )
