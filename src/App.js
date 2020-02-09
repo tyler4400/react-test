@@ -14,7 +14,7 @@ import WrappedNormalLoginForm from "./components/AntdForm";
 import MyForm from "./components/MyFrom";
 import ReduxTest from "./components/ReduxTest";
 import { Provider } from "react-redux";
-import store from "./Store";
+import store from "./store";
 
 function App(){
     // return (

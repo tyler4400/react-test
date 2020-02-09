@@ -1,17 +1,13 @@
 import React from "react";
-// import store from "../Store";
 import {Button} from "antd";
-import { connect } from "react-redux";
+import {connect} from "react-redux";
+import {add, asyncAdd, minus} from "../store/module/count";
 
-const mapStateToProps =state => ({num: state});
+const mapStateToProps = state => ({num: state.counter});
 const mapDispatchToProps = {
-    add: () => ({type: 'add'}),
-    minus: () => ({type: 'minus'}),
-    asyncAdd: () => dispatch => {
-        setTimeout(() => {
-            dispatch({type: 'add'});
-        }, 2000)
-    }
+    add,
+    minus,
+    asyncAdd
 };
 
 function ReduxTest({add, minus, num, asyncAdd}){
@@ -25,6 +21,7 @@ function ReduxTest({add, minus, num, asyncAdd}){
 
     )
 }
+
 export default connect(
     mapStateToProps,
     mapDispatchToProps
