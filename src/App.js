@@ -15,6 +15,7 @@ import MyForm from "./components/MyFrom";
 import ReduxTest from "./components/ReduxTest";
 import { Provider } from "react-redux";
 import store from "./store";
+import RouterTest from "./components/RouterTest";
 
 function App(){
     // return (
@@ -94,7 +95,9 @@ function App(){
             <h1>Redux的学习</h1>
             <Provider store={store}>
                 <ReduxTest/>
+                <RouterTest/>
             </Provider>
+            <div style={{padding: "100px"}}/>
         </div>
     )
 }
