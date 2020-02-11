@@ -98,12 +98,13 @@ function NoMatch(route){
 }
 
 const mapStateToProps = state => ({isLogin: state.user.isLogin});
-const mapDispatchToProps = {login};
 // 希望用法：<PrivateRoute component={About} path="/about" ...>
 const PrivateRoute = connect(mapStateToProps)(({component: Comp, isLogin, ...rest}) => (
-        <Route {...rest} render={props => isLogin ? <Comp {...rest}/> : ( // 视频中rest是给到了Route组件，但是要给到Comp才能打印location
-            <Redirect to={{pathname: '/login', state: {redirect: props.location.pathname}}}/>
-        )}/>
+        <Route {...rest} render={
+            props => isLogin ?
+                <Comp {...rest}/>  // 视频中rest是给到了Route组件，但是要给到Comp才能打印location
+                : <Redirect to={{pathname: '/login', state: {redirect: props.location.pathname}}}/>
+        }/>
     )
 );
 
@@ -118,7 +119,7 @@ const Login = connect(
             return (
                 <div>
                     <p>您还没有登录</p>
-                    <Button onClick={login} disabled={logging} loading={logging}>登录</Button>
+                    <Button type="primary" onClick={login} disabled={logging} loading={logging}>登录</Button>
                 </div>
             )
         }
