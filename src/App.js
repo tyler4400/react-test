@@ -16,6 +16,8 @@ import ReduxTest from "./components/ReduxTest";
 import { Provider } from "react-redux";
 import store from "./store";
 import RouterTest from "./components/RouterTest";
+import store_saga from "./store-saga";
+import RouteSample from "./components/RouteSample"
 
 function App(){
     // return (
@@ -97,6 +99,11 @@ function App(){
                 <ReduxTest/>
                 <RouterTest/>
             </Provider>
+            <h1>Redux-saga的学习</h1>
+            <Provider store={store_saga}>
+                <RouteSample/>
+            </Provider>
+
             <div style={{padding: "100px"}}/>
         </div>
     )
