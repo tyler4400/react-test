@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+
+// 自己实现ReactDOM
+import "./index2.js";
+
 // import store from './Store';
 ReactDOM.render(<App />, document.getElementById('root'));
 // store.subscribe(() =>
